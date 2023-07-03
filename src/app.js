@@ -1,5 +1,5 @@
 import express from "express";
-import { routes } from "./routes/routes.js";
+import { routes } from "./routes/order.routes.js";
 import cors from 'cors'
 
 //instancia e configura o express
@@ -12,4 +12,4 @@ app.use('/', routes)
 
 //cria porta para o servidor
 const port = 8800;
-app.listen(port, () => console.log("listening to port" + port));
+app.listen(port, () => console.log("listening to port " + port));
