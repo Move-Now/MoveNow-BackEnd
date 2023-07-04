@@ -41,7 +41,12 @@ export class Order {
 
   };
 
-  async deleteOrder(req, res){
+  async getUserById(req, res){
+    const {id} = req.params;
+    const result = await pool.query('SELECT * FROM usuario WHERE id_cliente = ?', [id]);
 
+    return res.status(200).send(result[0])
   };
+
+
 };              
